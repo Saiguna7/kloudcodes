@@ -72,7 +72,7 @@ export default function Emailsection() {
           <Link href="https://www.instagram.com/kloudcode?igsh=MWZjMHVhZTlhejV3dg==">
             <Image src={InstagramIcon}  alt="Instagram Icon" />
           </Link>
-          <Link href="">
+          <Link href="https://www.facebook.com/profile.php?id=100076056519394&mibextid=qi2Omg">
             <Image src={FacebookIcon}  alt="Facebook Icon" />
           </Link>
           <Link href="https://www.linkedin.com/in/sai-guna-vanam-817404251/">
