@@ -5,13 +5,14 @@ import {
   Head,
   Heading,
   Hr,
+  Img,
   Container,
   Preview,
   Section,
   Text,
+
 } from "@react-email/components";
 import { Tailwind } from "@react-email/tailwind";
-import Image from "next/image";
 type ContactFormEmailProps = {
   name: string;
   email: string;
@@ -30,15 +31,14 @@ const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
     <Tailwind>
       <Body className="bg-gray-100 text-black">
         <Container>
+       
           <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
-          
-          <Image
+          <Img
             src="https://www.kloudcodes.com/images/logo.png"
             width={150}
             height={50}
-            alt="Kloudcodes"
+            alt="Kloudcode"
             style={{margin:"0 250px",marginBottom:"30px"}}
-            quality={100}
           />
             <Heading className="leading-tight">{subject}</Heading>
             <p className="text-center">

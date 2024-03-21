@@ -10,17 +10,10 @@ import {z} from "zod"
 import {toast} from "sonner"
 import Image from "next/image";
 import Link from "next/link";
-import {PhoneIcon} from "@heroicons/react/24/solid" 
-import ContactFormEmail from "@/emails/contant-email-form";
+import {PhoneIcon} from "@heroicons/react/24/solid"
 import {sendEmail} from "@/app/_actions"
-import ReactDOMServer from "react-dom/server";
 export type ContactForminput=z.infer<typeof ContactFormSchema>
 export default function Emailsection() {
-  const generateEmailHtml = async (data: ContactForminput) => {
-    const emailElement = <ContactFormEmail {...data} />;
-    const emailHtml = ReactDOMServer.renderToString(emailElement);
-    return emailHtml;
-  };
     const{
         register,
         handleSubmit,
@@ -30,8 +23,8 @@ export default function Emailsection() {
         resolver: zodResolver(ContactFormSchema)
     })
     const processForm: SubmitHandler<ContactForminput>= async data=>{
-      const emailHtml = await generateEmailHtml(data);
-        const result=await sendEmail(data,emailHtml)
+
+        const result=await sendEmail(data)
         if(result?.success){
             toast.success('Email sent')
             reset()
