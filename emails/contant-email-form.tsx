@@ -36,7 +36,7 @@ const ContactFormEmail: React.FC<Readonly<ContactFormEmailProps>> = ({
             src="https://www.kloudcodes.com/images/logo.png"
             width={150}
             height={50}
-            alt="Kloudcode"
+            alt="Kloudcodes"
             style={{margin:"0 250px",marginBottom:"30px"}}
             quality={100}
           />

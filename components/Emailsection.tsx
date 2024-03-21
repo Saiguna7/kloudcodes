@@ -16,6 +16,11 @@ import {sendEmail} from "@/app/_actions"
 import ReactDOMServer from "react-dom/server";
 export type ContactForminput=z.infer<typeof ContactFormSchema>
 export default function Emailsection() {
+  const generateEmailHtml = async (data: ContactForminput) => {
+    const emailElement = <ContactFormEmail {...data} />;
+    const emailHtml = ReactDOMServer.renderToString(emailElement);
+    return emailHtml;
+  };
     const{
         register,
         handleSubmit,
@@ -35,11 +40,7 @@ export default function Emailsection() {
         console.log(result?.error)
         toast.error('something went wrong!')
     }
-    const generateEmailHtml = async (data: ContactForminput) => {
-      const emailElement = <ContactFormEmail {...data} />;
-      const emailHtml = ReactDOMServer.renderToString(emailElement);
-      return emailHtml;
-    };
+    
   return (
     <>
    <section
