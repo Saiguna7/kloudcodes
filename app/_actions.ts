@@ -19,12 +19,16 @@ export async function sendEmail(data: ContactFormInputs) {
                 react: ContactFormEmail({name,email,subject,message})
             })
             return {success:true,data}
-        }catch(error){
+            
+        }catch(error:Error | any){
+            console.error("Error digest:", error.digest);
             return {success: false,error}
+            
         }
     }
         if(result.error){
             return {success:false, error:result.error.format()}
+            
         }
     }
 
