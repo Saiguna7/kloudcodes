@@ -3,10 +3,9 @@ import { useEffect, useState } from 'react';
 import anime from "animejs"
 import Image from 'next/image';
 type Splin3dProps= {
-    finishloading: () => void; // Adjust the type according to the finishloading function
+    finishloading: () => void; 
   }
   
-
 export default function Splin3d({ finishloading}:Splin3dProps) {
   const [isloaded, setLoaded] = useState(false);
 

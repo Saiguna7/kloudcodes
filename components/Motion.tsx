@@ -36,7 +36,7 @@ export function Typeanimation() {
               sequence={[
                 "Web Developer",
                 1000,
-                "Mobile Developer",
+                "Mobile App Developer",
                 1000,
                 "UI/UX Designer",
                 1000,
