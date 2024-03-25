@@ -4,6 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import {z} from "zod"
 import {toast} from "sonner"
 import {SubmitHandler, useForm} from "react-hook-form"
+import { sendEmail } from "@/app/_actions"
 export type ContactForminput=z.infer<typeof ContactFormSchema>
 export default function Formemail() {
     const{
@@ -14,17 +15,10 @@ export default function Formemail() {
     }=useForm<ContactForminput>({
         resolver: zodResolver(ContactFormSchema)
     })
-    const onSubmit: SubmitHandler<ContactForminput> = async (data) => {
-      // Send the form data to the server-side route
-      const response = await fetch("/api/contact-form-handler", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+    const processForm: SubmitHandler<ContactForminput> = async (data) => {
+     const result= await sendEmail(data)
   
-      if (response.ok) {
+      if (result?.success) {
         toast.success("Email sent");
         reset();
       } else {
@@ -33,7 +27,7 @@ export default function Formemail() {
     };
   return (
     <>
-      <form className="flex flex-col"     onSubmit={handleSubmit(onSubmit)}   >
+      <form className="flex flex-col"     onSubmit={handleSubmit(processForm)}   >
           <div className="mb-6">
             <label
               htmlFor="name"
