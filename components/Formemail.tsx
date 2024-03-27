@@ -27,7 +27,7 @@ export default function Formemail() {
     };
   return (
     <>
-      <form className="flex flex-col"     onSubmit={handleSubmit(processForm)}   >
+      <form data-aos="zoom-in-left" className="flex flex-col"     onSubmit={handleSubmit(processForm)}   >
           <div className="mb-6">
             <label
               htmlFor="name"

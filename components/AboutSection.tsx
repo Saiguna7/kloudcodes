@@ -1,13 +1,21 @@
 
 import Image from "next/image";
+import Imagemotion from "./Imagemotion";
 const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <Imagemotion>
         <Image src="/images/about-image.png" width={500} height={500} alt='about' quality={100} priority/>
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Us</h2>
-          <p className="text-base lg:text-lg text-justify">
+        </Imagemotion>
+        <div   className="mt-4 md:mt-0 text-left flex flex-col h-full">
+          <h2 data-aos="fade-down" ata-aos-duration="3000" className="text-4xl font-bold text-white mb-4">About Us</h2>
+          <div data-aos="fade-left"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine">
+
+          <p  className="text-base lg:text-lg text-justify">
+
             <b>Greetings from KloudCodes!</b>
             <br></br>
             We are delighted to welcome you to our innovative world of software
@@ -30,6 +38,7 @@ const AboutSection = () => {
             -N.L VARUNKUMAR,</strong>
               
           </p>
+          </div>
         </div>
       </div>
     </section>

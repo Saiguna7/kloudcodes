@@ -19,7 +19,7 @@ export default function Emailsection() {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2">
       </div>
-      <div className="z-10">
+      <div data-aos="zoom-in-down" className="z-10">
         <h5 className="text-xl font-bold text-white my-2">
           Let&apos;s Connect
         </h5>
@@ -51,8 +51,8 @@ export default function Emailsection() {
           </Link>
         </div>
       </div>
-      <div>
-        <h1 className='text-center text-white'>Contact Us</h1>
+      <div >
+        <h1 data-aos="fade-down" className='text-center text-white'>Contact Us</h1>
         <Formemail/>
       </div>
     </section>

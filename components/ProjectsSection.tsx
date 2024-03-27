@@ -1,8 +1,8 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useTransition } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const projectsData = [
   {
@@ -64,11 +64,12 @@ const projectsData = [
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-
+  const isInView = useInView(ref, { once: false });
+  const controls = useAnimation();
   const handleTagChange = (newTag:any) => {
     setTag(newTag);
   };
+  
 
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
@@ -78,6 +79,7 @@ const ProjectsSection = () => {
     initial: { y: 50, opacity: 0 },
     animate: { y: 0, opacity: 1 },
   };
+  isInView && controls.start("animate");
 
   return (
     <section id="projects">

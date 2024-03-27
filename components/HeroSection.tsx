@@ -36,8 +36,11 @@ const HeroSection = () => {
         </Motion1>
                 <Motion2>
       
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
+          <div data-aos="zoom-in-up"
+    data-aos-offset="300"
+    data-aos-easing="ease-in-sine" className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
+            
             priority
             src="/images/hero-image.png"
             alt="hero image"
