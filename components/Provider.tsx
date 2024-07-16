@@ -12,6 +12,7 @@ export default function Provider({children}:{children:React.ReactNode}) {
   },[isloading])
   if(isloading && isHome)
   return <Splin3d finishloading={()=>setloading(false)}/>
+  
   return (
     <>
       {children}
