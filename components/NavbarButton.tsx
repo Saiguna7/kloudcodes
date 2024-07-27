@@ -3,10 +3,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 import MenuOverlay from "./MenuOverlay";
 type NavLink = {
-    title: string;
-    path: string;
-  };
-export default function NavbarButton({navLinks}:{navLinks:NavLink[]}) {
+  title: string;
+  path: string;
+};
+export default function NavbarButton({ navLinks }: { navLinks: NavLink[] }) {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const toggleNavbar = () => {
@@ -17,7 +17,7 @@ export default function NavbarButton({navLinks}:{navLinks:NavLink[]}) {
     <>
       <button
         onClick={toggleNavbar}
-        className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+        className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white custom-pointer"
         title="Open Menu"
       >
         {!navbarOpen ? (

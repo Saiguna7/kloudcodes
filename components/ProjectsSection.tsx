@@ -66,10 +66,9 @@ const ProjectsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const controls = useAnimation();
-  const handleTagChange = (newTag:any) => {
+  const handleTagChange = (newTag: any) => {
     setTag(newTag);
   };
-  
 
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
@@ -84,7 +83,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-       We Do Projects
+        We Do Projects
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
