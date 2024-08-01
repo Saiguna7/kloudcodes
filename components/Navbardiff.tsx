@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NavbarButton from "./NavbarButton";
 import NavLink from "./NavLink";
+import { memo } from "react";
 const navLinks = [
   {
     title: "About",
@@ -54,4 +55,4 @@ const Navbardiff = () => {
   );
 };
 
-export default Navbardiff;
+export default memo(Navbardiff);
