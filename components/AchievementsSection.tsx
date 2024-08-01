@@ -1,8 +1,6 @@
-"use client";
 import Image from "next/image";
 import Imagemotion from "./Imagemotion";
 import Link from "next/link";
-import { memo } from "react";
 const AchievementsSection = () => {
   return (
     <section className="text-white" id="services">
@@ -149,4 +147,4 @@ const AchievementsSection = () => {
   );
 };
 
-export default memo(AchievementsSection);
+export default AchievementsSection;
