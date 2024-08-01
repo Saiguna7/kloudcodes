@@ -1,16 +1,15 @@
-
 import { motion } from "framer-motion";
 
 const variants = {
   default: { width: 0 },
   active: { width: "calc(100% - 0.75rem)" },
 };
-type TabButtonProp={
-    active: boolean
-    selectTab: () => void;
-    children:React.ReactNode
-}
-const TabButton = ({ active, selectTab, children }:TabButtonProp) => {
+type TabButtonProp = {
+  active: boolean;
+  selectTab: () => void;
+  children: React.ReactNode;
+};
+const TabButton = ({ active, selectTab, children }: TabButtonProp) => {
   const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
   return (
     <button onClick={selectTab}>

@@ -99,4 +99,168 @@ background-color: #09090a;
   .custom-pointer{
     cursor: url('/pointer.png'),pointer;
   }
+  .box{
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .box::before{
+   content: "";
+   position: absolute;
+   background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 64%, 1) 0%,
+    hsla(339, 100%, 55%, 1) 100%
+  );
+  height:500px;
+  width: 500px;
+  animation: rotate 8s linear infinite;
+
+  }
+  .box span{
+    position: absolute;
+    border-radius: 8px;
+    inset: 5px;
+    background: #09090a;
+    z-index: 1;
+  }
+  .box1 span{
+    position: absolute;
+    border-radius: 8px;
+    inset: 5px;
+    background: #09090a;
+    z-index: 1;
+  }
+  .box1::before {
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(102, 102, 102, 0.75) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    height: 400px;
+    width: 100px;
+    transform: translate(0);
+    position: absolute;
+    animation: rotate 5s linear forwards infinite;
+    top: 50%;
+    transform-origin: top center;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .box2::before,
+.box2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    45deg,
+    #ff595e,
+    #ffca3a,
+    #8ac926,
+    #1982c4,
+    #6a4c93,
+    #ff6700
+  );
+  background-size: 600%;
+  animation: glow 20s linear infinite;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.box2::after {
+  filter: blur(25px);
+  transform: translate3d(0, 0, 0);
+}
+.box2 span{
+  position: absolute;
+  border-radius: 8px;
+  background: #09090a;
+  z-index: 1;
+  inset: 5px;
+}
+@keyframes glow {
+  0% {
+    background-position: 0 0;
+  }
+
+  50% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: 0 0;
+  }
+}
+.box3 {
+  outline-width: 1px;
+  outline-offset: 0;
+  outline-color: rgba(0, 130, 206, 0.75);
+  outline-style: solid;
+  animation: animateOutline 4s ease infinite;
+}
+
+@keyframes animateOutline {
+  0% {
+    outline-width: 1px;
+    outline-offset: 0;
+    outline-color: rgba(0, 130, 206, 0);
+  }
+
+  10% {
+    outline-color: rgba(0, 130, 206, 0.75);
+  }
+
+  /* The animation finishes at 50% */
+  50% {
+    outline-width: 7px;
+    outline-offset: 4px;
+    outline-color: rgba(0, 130, 206, 0);
+  }
+
+  100% {
+    outline-width: 7px;
+    outline-offset: 4px;
+    outline-color: rgba(102, 102, 102, 0);
+  }
+}
+.box3 span{
+  position: absolute;
+  inset: 5px;
+  border-radius: 8px;
+  background: #09090a;
+}
+.box4 svg {
+  position: absolute;
+  border-radius: 8px;
+}
+
+.box4 .line {
+  stroke-dasharray: 260;
+  stroke-width: 5px;
+  fill: transparent;
+  stroke: rgba(17, 121, 190, 0.3);
+  animation: svgAnimation 2.5s linear infinite;
+}
+
+@keyframes svgAnimation {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
 }

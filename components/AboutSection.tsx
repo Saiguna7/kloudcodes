@@ -27,7 +27,7 @@ const AboutSection = () => {
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
           >
-            <p className="text-base lg:text-lg text-justify">
+            <p className="md:text-base text-sm leading-tight lg:text-lg text-justify sm:leading-normal  sm:tracking-normal">
               <b>Greetings from KloudCodes!</b>
               <br></br>
               We are delighted to welcome you to our innovative world of
@@ -48,12 +48,6 @@ const AboutSection = () => {
               you for considering KoludCode as your technology partner. We look
               forward to collaborating with you and turning your visions into
               reality. Cheers to a future filled with possibilities! <br></br>
-              <br></br>
-              <strong>
-                CEO -N.L VARUNKUMAR, Managing Lead N SHRAVAN KUMAR (Java Full
-                Stack Developer), Managing Lead V SAI GUNA (Full Stack Developer
-                Netxjs){" "}
-              </strong>
             </p>
           </div>
         </div>

@@ -1,14 +1,18 @@
-
 import Link from "next/link";
-type  Props = {
+type Props = {
   imgUrl: string;
   title: string;
   description: string;
   gitUrl: string;
   previewUrl: string;
-
-}
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }:Props) => {
+};
+const ProjectCard = ({
+  imgUrl,
+  title,
+  description,
+  gitUrl,
+  previewUrl,
+}: Props) => {
   return (
     <div>
       <div
@@ -19,13 +23,11 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }:Props) =
           <Link
             href={gitUrl}
             className="h-14 w-14 mr-2  relative  group/link"
-          >
-          </Link>
+          ></Link>
           <Link
             href={previewUrl}
             className="h-14 w-14  relative group/link"
-          >
-          </Link>
+          ></Link>
         </div>
       </div>
       <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">

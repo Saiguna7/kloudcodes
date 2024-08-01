@@ -1,30 +1,26 @@
-import Link from "next/link";
-
-import NavLink from "./NavLink";
-
 import Image from "next/image";
+import Link from "next/link";
 import NavbarButton from "./NavbarButton";
-
+import NavLink from "./NavLink";
 const navLinks = [
   {
     title: "About",
-    path: "#about",
+    path: "/#about",
   },
   {
     title: "Our Services",
-    path: "#services",
+    path: "/#services",
   },
   {
     title: "Projects",
-    path: "#projects",
+    path: "/#projects",
   },
   {
     title: "Contact",
-    path: "#contact",
+    path: "/#contact",
   },
 ];
-
-const Navbar = () => {
+const Navbardiff = () => {
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-50 bg-[#121212] bg-opacity-100">
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
@@ -58,4 +54,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbardiff;

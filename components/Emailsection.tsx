@@ -26,6 +26,12 @@ export default function Emailsection() {
             always open. Whether you have a question or just want to say hi,
             We&apos;re try my best to get back to you!
             <br></br>
+            <strong className="font-bold text-white text-sm">
+              CEO -N.L VARUNKUMAR, Managing Lead N SHRAVAN KUMAR (Java Full
+              Stack Developer), Managing Lead V SAI GUNA (Full Stack Developer
+              Netxjs){" "}
+            </strong>
+            <br></br>
             <MapPinIcon className="h-6 w-6 inline-flex text-white" />
             <strong className="text-white">
               Jai Bharath Nagar, Nizampet, Hyderabad-500090
