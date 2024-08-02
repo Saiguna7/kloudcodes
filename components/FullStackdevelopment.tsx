@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const FullStackdevelopment = () => {
   return (
     <section
@@ -50,6 +52,24 @@ const FullStackdevelopment = () => {
         exceptional service and support, ensuring that your project is delivered
         on time and within budget.
       </p>
+      <div className="flex flex-col md:flex-row md:justify-between md:space-x-2 gap-2">
+        <Image
+          alt="fullstack"
+          width={600}
+          height={600}
+          src="/images/fullstack.jpg"
+          priority
+          quality={100}
+        />
+        <Image
+          alt="fullstack"
+          width={600}
+          height={600}
+          src="/images/fullsk.png"
+          priority
+          quality={100}
+        />
+      </div>
     </section>
   );
 };

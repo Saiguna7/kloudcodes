@@ -13,10 +13,20 @@ const AchievementsSection = () => {
           >
             Our Services
           </h2>
-          <div className="grid md:grid-cols-2 md:grid-rows-3 grid-cols-1 gap-4 md:w-[650px]">
+          <div className="grid lg:grid-cols-2 md:grid-rows-3 grid-cols-1 gap-4 md:grid-cols-1 lg:w-[650px]">
             <div className="box ">
               <span></span>
               <div className="m-4 relative z-[2]">
+                <div className="flex justify-center mb-2">
+                  <Image
+                    src="/images/Full Stack Logo.jpeg"
+                    alt="log"
+                    width={100}
+                    height={100}
+                    priority
+                    quality={100}
+                  />
+                </div>
                 <h1 className="text-center  md:text-md text-sm font-bold">
                   FULLSTACK DEVELOPMENT
                 </h1>
@@ -40,6 +50,16 @@ const AchievementsSection = () => {
             <div className="relative overflow-hidden shadow-lg rounded-[8px] box1 ">
               <span></span>
               <div className="m-4 relative z-[2]">
+                <div className="flex justify-center mb-2">
+                  <Image
+                    src="/images/webapplication.png"
+                    alt="log"
+                    width={75}
+                    height={50}
+                    priority
+                    quality={100}
+                  />
+                </div>
                 <h1 className="text-center  md:text-md text-sm font-bold">
                   WEB & MOBILE APPLICTATION
                 </h1>
@@ -61,6 +81,16 @@ const AchievementsSection = () => {
             <div className="relative shadow-lg rounded-[8px] box2">
               <span></span>
               <div className="m-4 relative z-[2]">
+                <div className="flex justify-center mb-2">
+                  <Image
+                    src="/images/digital.jpg"
+                    alt="log"
+                    width={75}
+                    height={50}
+                    priority
+                    quality={100}
+                  />
+                </div>
                 <h1 className="text-center  md:text-md text-sm font-bold">
                   DIGITAL MARKETING
                 </h1>
@@ -85,6 +115,16 @@ const AchievementsSection = () => {
             <div className="relative shadow-lg rounded-[8px] box3">
               <span></span>
               <div className="m-4 relative z-[2]">
+                <div className="flex justify-center mb-2">
+                  <Image
+                    src="/images/services.jpg"
+                    alt="log"
+                    width={75}
+                    height={50}
+                    priority
+                    quality={100}
+                  />
+                </div>
                 <h1 className="text-center  md:text-md text-sm font-bold">
                   MANAGED SERVICES
                 </h1>
