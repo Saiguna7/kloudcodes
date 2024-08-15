@@ -3,7 +3,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 
 import Image from "next/image";
-import NavbarButton from "./NavbarButton";
+import NavbarMenu from "./NavbarMenu";
 
 const navLinks = [
   {
@@ -41,8 +41,8 @@ const Navbar = () => {
             priority
           />
         </Link>
-        <div className="mobile-menu block md:hidden">
-          <NavbarButton navLinks={navLinks} />
+        <div className="mobile-menu block md:hidden relative">
+          <NavbarMenu navLinks={navLinks} />
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
