@@ -1,5 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import NavbarMenu from "./NavbarMenu";
 import NavLink from "./NavLink";
 import { memo } from "react";
@@ -10,7 +18,28 @@ const navLinks = [
   },
   {
     title: "Our Services",
-    path: "/#services",
+    dropdown: [
+      {
+        title: "Our Services",
+        path: "#services",
+      },
+      {
+        title: "Web development",
+        path: "/development",
+      },
+      {
+        title: "Web application",
+        path: "/web",
+      },
+      {
+        title: "Marketing",
+        path: "/marketing",
+      },
+      {
+        title: "Services",
+        path: "/services",
+      },
+    ],
   },
   {
     title: "Projects",
@@ -18,9 +47,82 @@ const navLinks = [
   },
   {
     title: "Contact",
-    path: "/#contact",
+    dropdown: [
+      {
+        title: "Contact",
+        path: "/#contact",
+      },
+      {
+        title: "Our Experts",
+        path: "/our_experts",
+      },
+    ],
   },
 ];
+type Prop1 = {
+  title: string;
+  dropdown: {
+    title: string;
+    path: string;
+  }[];
+};
+const Drop = ({ title, dropdown }: Prop1) => {
+  return (
+    <>
+      {title === "Contact" ? (
+        <>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent text-[rgb(173,183,190)] sm:text-xl max-md:mr-20">
+                  {title}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-[#121212]">
+                  <NavigationMenuLink className="flex  flex-col  w-[100px] gap-3 p-4 md:w-[135px] lg:w-[150px]">
+                    {dropdown?.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.path}
+                        className="py-2 pl-3 pr-4 text-[rgb(173,183,190)] text-lg lg:text-xl rounded md:p-0 hover:text-white custom-pointer"
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </>
+      ) : (
+        <>
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent text-[rgb(173,183,190)] sm:text-xl max-md:mr-20">
+                  {title}
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-[#121212]">
+                  <NavigationMenuLink className="lg:items-center grid grid-cols-2 grid-rows-3 gap-[10px]   w-[200px]  p-4 md:w-[400px]">
+                    {dropdown?.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.path}
+                        className="py-2 pl-3 pr-4 text-[rgb(173,183,190)] text-lg lg:text-xl rounded md:p-0 hover:text-white custom-pointer"
+                      >
+                        {item.title}
+                      </Link>
+                    ))}
+                  </NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </>
+      )}
+    </>
+  );
+};
 const Navbardiff = () => {
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-50 bg-[#121212] bg-opacity-100">
@@ -42,12 +144,29 @@ const Navbardiff = () => {
           <NavbarMenu navLinks={navLinks} />
         </div>
         <div className="menu hidden md:block md:w-auto" id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            {navLinks.map((link, index) => (
-              <li key={index}>
-                <NavLink href={link.path} title={link.title} />
-              </li>
-            ))}
+          <ul className="flex items-center p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+            {navLinks.map((link, index) =>
+              index <= 0 && !link.dropdown ? (
+                <li key={index}>
+                  <NavLink href={link.path} title={link.title} />
+                </li>
+              ) : index === 1 && link.dropdown ? (
+                <Drop key={index} title={link.title} dropdown={link.dropdown} />
+              ) : index === 2 && !link.dropdown ? (
+                <li key={index}>
+                  <NavLink href={link.path} title={link.title} />
+                </li>
+              ) : (
+                index === 3 &&
+                link.dropdown && (
+                  <Drop
+                    key={index}
+                    title={link.title}
+                    dropdown={link.dropdown}
+                  />
+                )
+              )
+            )}
           </ul>
         </div>
       </div>

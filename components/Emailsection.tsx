@@ -26,12 +26,14 @@ export default function Emailsection() {
             always open. Whether you have a question or just want to say hi,
             We&apos;re try my best to get back to you!
             <br></br>
-            <strong className="font-bold text-white text-sm">
-              CEO -N.L VARUNKUMAR, Managing Lead N SHRAVAN KUMAR (Java Full
-              Stack Developer), Managing Lead V SAI GUNA (Full Stack Developer
-              Netxjs){" "}
-            </strong>
             <br></br>
+            <div className="h-[30px] w-full flex justify-center mb-4">
+              <Link href="/our_experts" className="relative w-[200px]  group">
+                <h1 className="relative text-center text-lg font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-white to-white transition-all duration-300 ease-in-out z-[1] group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 animate-gradient-text custom-pointer">
+                  meet our experts-{">"}
+                </h1>
+              </Link>
+            </div>
             <MapPinIcon className="h-6 w-6 inline-flex text-white" />
             <strong className="text-white">
               Jai Bharath Nagar, Nizampet, Hyderabad-500090

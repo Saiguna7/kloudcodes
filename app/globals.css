@@ -1,78 +1,78 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
-    cursor: url('/cusrsor.png'),auto;
+    cursor: url("/cusrsor.png"), auto;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
- 
+
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
- 
+
     --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
- 
+
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
- 
+
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
- 
+
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
- 
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
- 
+
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
- 
+
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
- 
+
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
- 
+
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
- 
+
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
- 
+
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
- 
+
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
- 
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
- 
+
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-  .custom-scrollbar::-webkit-scrollbar{
+  .custom-scrollbar::-webkit-scrollbar {
     width: 10px;
     height: 4px;
-border-radius: 50px;
+    border-radius: 50px;
   }
-  .custom-scrollbar::-webkit-scrollbar-track{
-background-color: #09090a;
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #09090a;
   }
-  
+
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background: #2e3d5b;
     border-radius: 50px;
@@ -81,7 +81,7 @@ background-color: #09090a;
     background: #7878a3;
   }
 }
- 
+
 @layer base {
   * {
     @apply border-border;
@@ -96,36 +96,35 @@ background-color: #09090a;
     -ms-hyphens: auto;
     hyphens: auto;
   }
-  .custom-pointer{
-    cursor: url('/pointer.png'),pointer;
+  .custom-pointer {
+    cursor: url("/pointer.png"), pointer;
   }
-  .box{
+  .box {
     position: relative;
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
   }
-  .box::before{
-   content: "";
-   position: absolute;
-   background: linear-gradient(
-    90deg,
-    hsla(197, 100%, 64%, 1) 0%,
-    hsla(339, 100%, 55%, 1) 100%
-  );
-  height:500px;
-  width: 500px;
-  animation: rotate 8s linear infinite;
-
+  .box::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      90deg,
+      hsla(197, 100%, 64%, 1) 0%,
+      hsla(339, 100%, 55%, 1) 100%
+    );
+    height: 500px;
+    width: 500px;
+    animation: rotate 8s linear infinite;
   }
-  .box span{
+  .box span {
     position: absolute;
     border-radius: 8px;
     inset: 5px;
     background: #09090a;
     z-index: 1;
   }
-  .box1 span{
+  .box1 span {
     position: absolute;
     border-radius: 8px;
     inset: 5px;
@@ -152,115 +151,138 @@ background-color: #09090a;
     from {
       transform: rotate(0);
     }
-  
+
     to {
       transform: rotate(360deg);
     }
   }
   .box2::before,
-.box2::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(
-    45deg,
-    #ff595e,
-    #ffca3a,
-    #8ac926,
-    #1982c4,
-    #6a4c93,
-    #ff6700
-  );
-  background-size: 600%;
-  animation: glow 20s linear infinite;
-  width: 100%;
-  border-radius: 8px;
-}
-
-.box2::after {
-  filter: blur(25px);
-  transform: translate3d(0, 0, 0);
-}
-.box2 span{
-  position: absolute;
-  border-radius: 8px;
-  background: #09090a;
-  z-index: 1;
-  inset: 5px;
-}
-@keyframes glow {
-  0% {
-    background-position: 0 0;
+  .box2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(
+      45deg,
+      #ff595e,
+      #ffca3a,
+      #8ac926,
+      #1982c4,
+      #6a4c93,
+      #ff6700
+    );
+    background-size: 600%;
+    animation: glow 20s linear infinite;
+    width: 100%;
+    border-radius: 8px;
   }
 
-  50% {
-    background-position: 100% 0;
+  .box2::after {
+    filter: blur(25px);
+    transform: translate3d(0, 0, 0);
   }
-
-  100% {
-    background-position: 0 0;
+  .box2 span {
+    position: absolute;
+    border-radius: 8px;
+    background: #09090a;
+    z-index: 1;
+    inset: 5px;
   }
-}
-.box3 {
-  outline-width: 1px;
-  outline-offset: 0;
-  outline-color: rgba(0, 130, 206, 0.75);
-  outline-style: solid;
-  animation: animateOutline 4s ease infinite;
-}
+  @keyframes glow {
+    0% {
+      background-position: 0 0;
+    }
 
-@keyframes animateOutline {
-  0% {
+    50% {
+      background-position: 100% 0;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
+  }
+  .box3 {
     outline-width: 1px;
     outline-offset: 0;
-    outline-color: rgba(0, 130, 206, 0);
-  }
-
-  10% {
     outline-color: rgba(0, 130, 206, 0.75);
+    outline-style: solid;
+    animation: animateOutline 4s ease infinite;
   }
 
-  /* The animation finishes at 50% */
-  50% {
-    outline-width: 7px;
-    outline-offset: 4px;
-    outline-color: rgba(0, 130, 206, 0);
+  @keyframes animateOutline {
+    0% {
+      outline-width: 1px;
+      outline-offset: 0;
+      outline-color: rgba(0, 130, 206, 0);
+    }
+
+    10% {
+      outline-color: rgba(0, 130, 206, 0.75);
+    }
+
+    /* The animation finishes at 50% */
+    50% {
+      outline-width: 7px;
+      outline-offset: 4px;
+      outline-color: rgba(0, 130, 206, 0);
+    }
+
+    100% {
+      outline-width: 7px;
+      outline-offset: 4px;
+      outline-color: rgba(102, 102, 102, 0);
+    }
+  }
+  .box3 span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 8px;
+    background: #09090a;
+  }
+  .box4 svg {
+    position: absolute;
+    border-radius: 8px;
   }
 
-  100% {
-    outline-width: 7px;
-    outline-offset: 4px;
-    outline-color: rgba(102, 102, 102, 0);
+  .box4 .line {
+    stroke-dasharray: 260;
+    stroke-width: 5px;
+    fill: transparent;
+    stroke: rgba(17, 121, 190, 0.3);
+    animation: svgAnimation 2.5s linear infinite;
   }
-}
-.box3 span{
-  position: absolute;
-  inset: 5px;
-  border-radius: 8px;
-  background: #09090a;
-}
-.box4 svg {
-  position: absolute;
-  border-radius: 8px;
-}
 
-.box4 .line {
-  stroke-dasharray: 260;
-  stroke-width: 5px;
-  fill: transparent;
-  stroke: rgba(17, 121, 190, 0.3);
-  animation: svgAnimation 2.5s linear infinite;
-}
+  @keyframes svgAnimation {
+    from {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 1000;
+    }
+  }
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 
-@keyframes svgAnimation {
-  from {
-    stroke-dashoffset: 0;
+  .animate-gradient-text {
+    background-image: linear-gradient(
+      45deg,
+      #3490dc,
+      #6574cd,
+      #9561e2,
+      #f66d9b
+    );
+    background-size: 300% 300%;
+    animation: gradient-animation 6s ease infinite;
   }
-  to {
-    stroke-dashoffset: 1000;
-  }
-}
 }
