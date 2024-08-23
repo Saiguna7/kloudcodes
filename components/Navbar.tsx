@@ -22,7 +22,7 @@ const navLinks = [
     dropdown: [
       {
         title: "Our Services",
-        path: "#services",
+        path: "/#services",
       },
       {
         title: "Web development",

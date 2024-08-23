@@ -3,7 +3,7 @@ import { Bars3Icon } from "@heroicons/react/24/solid";
 import { Sheet, SheetClose, SheetContent, SheetTrigger } from "./ui/sheet";
 import NavLink from "./NavLink";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
