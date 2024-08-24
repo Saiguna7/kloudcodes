@@ -20,16 +20,42 @@ const Members = ({
 }: Props) => {
   return (
     <div className="flex text-white gap-[20px]">
-      <div className="h-[140px] w-[130px] overflow-hidden bg-white">
-        <Image
-          priority
-          src={image}
-          alt={imageName}
-          width={130}
-          height={180}
-          layout="responsive"
-        />
-      </div>
+      {imageName === "saiguna" && (
+        <div className="h-[140px] w-[130px] overflow-hidden bg-white">
+          <Image
+            priority
+            src={image}
+            alt={imageName}
+            width={130}
+            height={180}
+            layout="responsive"
+          />
+        </div>
+      )}
+      {imageName === "shravan" && (
+        <div className="h-[140px] w-[130px] lg:w-[120px] overflow-hidden bg-white">
+          <Image
+            priority
+            src={image}
+            alt={imageName}
+            width={120}
+            height={180}
+            layout="responsive"
+          />
+        </div>
+      )}
+      {imageName === "sandeep" && (
+        <div className="h-[140px] w-[130px] lg:w-[150px] overflow-hidden bg-white">
+          <Image
+            priority
+            src={image}
+            alt={imageName}
+            width={150}
+            height={180}
+            layout="responsive"
+          />
+        </div>
+      )}
       <div className="flex flex-col h-full">
         <div className="flex-grow space-y-2 sm:space-y-3">
           <h1 className="font-semibold text-[16px] md:text-lg lg:text-[22px]">
