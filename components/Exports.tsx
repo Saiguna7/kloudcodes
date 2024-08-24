@@ -10,6 +10,9 @@ const Exports = () => {
           <div
             className="w-[350px]  md:w-[500px] lg:min-h-[100px] lg:w-[800px] px-4 py-4 rounded-lg shadow-lg 
             bg-black bg-opacity-30 backdrop-filter backdrop-blur-lg"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
           >
             <p className="text-white font-semibold text-sm lg:text-lg">
               At KLOUDCODES, we believe that our people are our greatest asset.
@@ -26,10 +29,20 @@ const Exports = () => {
       </section>
       <section className="w-full mx-[10px] mt-[20px] mb-[10px]">
         <div className="flex max-md:flex-col w-full md:justify-between space-y-4 text-white md:px-[60px]">
-          <h1 className="text-3xl font-semibold md:text-4xl">Our Experts</h1>
+          <h1
+            className="text-3xl font-semibold md:text-4xl"
+            data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
+          >
+            Our Experts
+          </h1>
           <Link
             href={"/#contact"}
             className="custom-pointer flex items-center gap-[10px] group"
+            data-aos="fade-left"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine"
           >
             <h1 className="font-bold text-sm md:text-lg">Contact us</h1>
             <p className="group-hover:bg-purple-800 group-hover:translate-x-1 group-hover:transition-all duration-500 ease-in-out bg-purple-600 text-white font-semibold px-[3px] md:px-2 md:py-[1px]">

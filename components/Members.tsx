@@ -21,7 +21,12 @@ const Members = ({
   return (
     <div className="flex text-white gap-[20px]">
       {imageName === "saiguna" && (
-        <div className="h-[140px] w-[130px] overflow-hidden bg-white">
+        <div
+          className="h-[140px] w-[130px] overflow-hidden bg-white"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <Image
             priority
             src={image}
@@ -33,7 +38,12 @@ const Members = ({
         </div>
       )}
       {imageName === "shravan" && (
-        <div className="h-[140px] w-[130px] lg:w-[120px] overflow-hidden bg-white">
+        <div
+          className="h-[140px] w-[130px] lg:w-[120px] overflow-hidden bg-white"
+          data-aos="fade-up"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <Image
             priority
             src={image}
@@ -45,7 +55,12 @@ const Members = ({
         </div>
       )}
       {imageName === "sandeep" && (
-        <div className="h-[140px] w-[130px] lg:w-[150px] overflow-hidden bg-white">
+        <div
+          className="h-[140px] w-[130px] lg:w-[150px] overflow-hidden bg-white"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <Image
             priority
             src={image}
@@ -56,7 +71,12 @@ const Members = ({
           />
         </div>
       )}
-      <div className="flex flex-col h-full">
+      <div
+        className="flex flex-col h-full"
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         <div className="flex-grow space-y-2 sm:space-y-3">
           <h1 className="font-semibold text-[16px] md:text-lg lg:text-[22px]">
             {name}
