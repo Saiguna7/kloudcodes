@@ -10,7 +10,7 @@ type Props = {
   linkedin?: string;
   redirect: string;
 };
-const Members = ({
+const Members = async ({
   image,
   imageName,
   name,
@@ -18,11 +18,14 @@ const Members = ({
   linkedin,
   redirect,
 }: Props) => {
+  const imageBlur = await fetch("https://github.com/shadcn.png")
+    .then((res) => res.arrayBuffer())
+    .then((buffer) => Buffer.from(buffer).toString("base64"));
   return (
     <div className="flex text-white gap-[20px]">
       {imageName === "saiguna" && (
         <div
-          className="h-[140px] w-[130px] overflow-hidden bg-white"
+          className="h-[140px] w-[130px] overflow-hidden "
           data-aos="fade-right"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
@@ -34,12 +37,13 @@ const Members = ({
             width={130}
             height={180}
             layout="responsive"
+            className=" object-cover"
           />
         </div>
       )}
       {imageName === "shravan" && (
         <div
-          className="h-[140px] w-[130px] lg:w-[120px] overflow-hidden bg-white"
+          className="h-[140px] w-[130px] lg:w-[120px] overflow-hidden "
           data-aos="fade-up"
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
@@ -51,16 +55,12 @@ const Members = ({
             width={120}
             height={180}
             layout="responsive"
+            className=" object-cover"
           />
         </div>
       )}
       {imageName === "sandeep" && (
-        <div
-          className="h-[140px] w-[130px] lg:w-[150px] overflow-hidden bg-white"
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
-        >
+        <div className="h-[140px] w-[130px] lg:w-[150px] overflow-hidden ">
           <Image
             priority
             src={image}
@@ -68,14 +68,21 @@ const Members = ({
             width={150}
             height={180}
             layout="responsive"
+            className=" object-cover"
+            placeholder="blur"
+            blurDataURL={`data:image/png;base64,${imageBlur}`}
           />
         </div>
       )}
       <div
         className="flex flex-col h-full"
-        data-aos="fade-left"
-        data-aos-offset="300"
-        data-aos-easing="ease-in-sine"
+        {...(imageName !== "sandeep"
+          ? {
+              "data-aos": "fade-left",
+              "data-aos-offset": "300",
+              "data-aos-easing": "ease-in-sine",
+            }
+          : {})}
       >
         <div className="flex-grow space-y-2 sm:space-y-3">
           <h1 className="font-semibold text-[16px] md:text-lg lg:text-[22px]">

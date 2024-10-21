@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const ErrorPage = () => {
+const NotFound = () => {
   return (
     <div className="absolute inset-0 z-[999] flex flex-col items-center justify-center min-h-screen bg-black overflow-hidden">
       <div className="chess-board"></div>
@@ -26,4 +26,4 @@ const ErrorPage = () => {
   );
 };
 
-export default ErrorPage;
+export default NotFound;

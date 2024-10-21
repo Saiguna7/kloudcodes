@@ -1,8 +1,5 @@
-import React from "react";
-import ErrorPage from "./ErrorPage";
-import Image from "next/image";
-import Link from "next/link";
 import Member from "./member";
+import NotFound from "./not-found";
 
 const page = ({ params }: { params: { name: string } }) => {
   if (params.name === "sai-guna") {
@@ -75,7 +72,7 @@ const page = ({ params }: { params: { name: string } }) => {
   if (params.name !== "sandeep" || "sai-guna" || "shravan-kumar") {
     return (
       <>
-        <ErrorPage />
+        <NotFound />
       </>
     );
   }

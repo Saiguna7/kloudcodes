@@ -13,7 +13,8 @@ type Props = {
   p2: string;
   p3: string;
 };
-const Member = ({
+
+const Member = async ({
   lead,
   name,
   designation,
@@ -25,6 +26,9 @@ const Member = ({
   p2,
   p3,
 }: Props) => {
+  const imageBlur = await fetch("https://github.com/shadcn.png")
+    .then((res) => res.arrayBuffer())
+    .then((buffer) => Buffer.from(buffer).toString("base64"));
   return (
     <div className="w-full min-h-screen mt-[5.5rem] mb-[40px]">
       <div className="relative w-full">
@@ -61,7 +65,9 @@ const Member = ({
                   height={500}
                   priority
                   quality={100}
-                  className="lg:w-[1000px] lg:h-[500px] max-lg:w-[1500px] w-[350px] h-[500px]"
+                  className="lg:w-[1000px] lg:h-[500px] max-lg:w-[1500px] max-sm:w-[350px] h-[500px] object-cover"
+                  placeholder="blur"
+                  blurDataURL={`data:image/png;base64,${imageBlur}`}
                 />
               )}
               {imageName === "shravan" && (
@@ -72,7 +78,9 @@ const Member = ({
                   height={500}
                   priority
                   quality={100}
-                  className="lg:w-[1000px] lg:h-[500px] max-lg:w-[1500px] w-[200px] h-[400px]"
+                  className="lg:w-[1000px] lg:h-[500px] max-lg:w-[1500px] max-sm:w-[350px] h-[500px] object-cover"
+                  placeholder="blur"
+                  blurDataURL={`data:image/png;base64,${imageBlur}`}
                 />
               )}
               {imageName === "sandeep" && (
@@ -83,7 +91,9 @@ const Member = ({
                   height={500}
                   priority
                   quality={100}
-                  className="lg:w-[1500px] lg:h-[500px] max-lg:w-[1500px] w-[200px] h-[400px]"
+                  className="lg:w-[1500px] lg:h-[500px] max-lg:w-[1500px] max-sm:w-[350px] h-[400px] object-cover"
+                  placeholder="blur"
+                  blurDataURL={`data:image/png;base64,${imageBlur}`}
                 />
               )}
             </div>

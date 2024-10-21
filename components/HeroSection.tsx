@@ -4,7 +4,10 @@ import Link from "next/link";
 import { Motion1, Typeanimation } from "./Motion";
 import { Motion2 } from "./Motion";
 
-const HeroSection = () => {
+const HeroSection = async () => {
+  const imageBlur = await fetch("https://github.com/shadcn.png")
+    .then((res) => res.arrayBuffer())
+    .then((buffer) => Buffer.from(buffer).toString("base64"));
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -46,6 +49,8 @@ const HeroSection = () => {
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
               width={300}
               height={300}
+              placeholder="blur"
+              blurDataURL={`data:image/png;base64,${imageBlur}`}
             />
           </div>
         </Motion2>
