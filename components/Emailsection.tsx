@@ -20,7 +20,7 @@ export default function Emailsection() {
           <h5 className="text-xl font-bold text-white my-2">
             Let&apos;s Connect
           </h5>
-          <p className="text-[#ADB7BE] mb-4 max-w-md text-justify">
+          <div className="text-[#ADB7BE] mb-4 max-w-md text-justify">
             {" "}
             We&apos;re currently looking for new opportunities, our inbox is
             always open. Whether you have a question or just want to say hi,
@@ -28,10 +28,10 @@ export default function Emailsection() {
             <br></br>
             <br></br>
             <div className="h-[30px] w-full flex justify-center mb-4">
-              <Link href="/our_experts" className="relative w-[200px]  group">
-                <h1 className="relative text-center text-lg font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-white to-white transition-all duration-300 ease-in-out z-[1] group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 animate-gradient-text custom-pointer">
+              <Link href="/our_experts" className="relative w-[200px] group">
+                <span className="relative text-center text-lg font-semibold capitalize text-transparent bg-clip-text bg-gradient-to-r from-white to-white transition-all duration-300 ease-in-out z-[1] group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-500 animate-gradient-text custom-pointer">
                   meet our experts-{">"}
-                </h1>
+                </span>
               </Link>
             </div>
             <MapPinIcon className="h-6 w-6 inline-flex text-white" />
@@ -41,7 +41,7 @@ export default function Emailsection() {
             <br></br>
             <PhoneIcon className="h-6 w-6 inline-flex text-white" />{" "}
             <strong className="text-white">+91 9154548806</strong>
-          </p>
+          </div>
 
           <div className="socials flex flex-row gap-2">
             <Link

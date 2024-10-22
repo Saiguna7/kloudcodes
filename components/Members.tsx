@@ -1,26 +1,18 @@
 import Image from "next/legacy/image";
 import Link from "next/link";
 import React from "react";
+import Saiguna from "@/public/images/saiguna.jpg";
+import Shravan from "@/public/images/shravan.jpg";
+import Sandeep from "@/public/images/sandeep.jpg";
 import { IoLogoLinkedin } from "react-icons/io";
 type Props = {
-  image: string;
   imageName: string;
   name: string;
   work: string;
   linkedin?: string;
   redirect: string;
 };
-const Members = async ({
-  image,
-  imageName,
-  name,
-  work,
-  linkedin,
-  redirect,
-}: Props) => {
-  const imageBlur = await fetch("https://github.com/shadcn.png")
-    .then((res) => res.arrayBuffer())
-    .then((buffer) => Buffer.from(buffer).toString("base64"));
+const Members = ({ imageName, name, work, linkedin, redirect }: Props) => {
   return (
     <div className="flex text-white gap-[20px]">
       {imageName === "saiguna" && (
@@ -32,7 +24,7 @@ const Members = async ({
         >
           <Image
             priority
-            src={image}
+            src={Saiguna}
             alt={imageName}
             width={130}
             height={180}
@@ -50,7 +42,7 @@ const Members = async ({
         >
           <Image
             priority
-            src={image}
+            src={Shravan}
             alt={imageName}
             width={120}
             height={180}
@@ -63,14 +55,13 @@ const Members = async ({
         <div className="h-[140px] w-[130px] lg:w-[150px] overflow-hidden ">
           <Image
             priority
-            src={image}
+            src={Sandeep}
             alt={imageName}
             width={150}
             height={180}
             layout="responsive"
             className=" object-cover"
             placeholder="blur"
-            blurDataURL={`data:image/png;base64,${imageBlur}`}
           />
         </div>
       )}

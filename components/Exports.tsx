@@ -52,23 +52,20 @@ const Exports = () => {
         </div>
         <div className="flex  lg:gap-[200px] max-lg:flex-col  gap-[10px] mt-[30px] md:px-[60px]">
           <Members
-            image="/images/saiguna.jpg"
             imageName="saiguna"
             name="V. Saiguna"
-            work="Full Stack Developer & Manging"
+            work="Full Stack Developer & Managing"
             linkedin="https://www.linkedin.com/in/sai-guna-vanam-817404251/"
             redirect="sai-guna"
           />
           <Members
-            image="/images/shravan.jpg"
             imageName="shravan"
             name="N. Shravan kumar"
-            work="Java Full Stack Developer & Manging"
+            work="Java Full Stack Developer & Managing"
             linkedin="https://www.linkedin.com/in/shravan-nagapuri-46803a16b/"
             redirect="shravan-kumar"
           />
           <Members
-            image="/images/sandeep.jpg"
             imageName="sandeep"
             name="Sandeep"
             work="Graphic Designer"

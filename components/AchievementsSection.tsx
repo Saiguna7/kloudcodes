@@ -72,7 +72,7 @@ const AchievementsSection = () => {
                 </p>
                 <Link
                   href="/web"
-                  className="md:pl-24 pl-20 mt-2 text-sm text-transparent bg-clip-text bg-gradient-to-r from-slate-500 to-[rgba(102,102,102,0.75)] custom-pointer"
+                  className="md:pl-24 pl-20 mt-2 text-sm text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-[rgba(102,102,102,0.75)] custom-pointer"
                 >
                   Know more-{">"}
                 </Link>

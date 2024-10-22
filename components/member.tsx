@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Saiguna from "@/public/images/saiguna.jpg";
+import Shravan from "@/public/images/shravan.jpg";
+import Sandeep from "@/public/images/sandeep.jpg";
 type Props = {
   lead: string;
   name: string;
   designation: string;
-  image: string;
   imageName: string;
   about: string;
   linkedin?: string;
@@ -14,11 +16,10 @@ type Props = {
   p3: string;
 };
 
-const Member = async ({
+const Member = ({
   lead,
   name,
   designation,
-  image,
   imageName,
   about,
   linkedin,
@@ -26,9 +27,6 @@ const Member = async ({
   p2,
   p3,
 }: Props) => {
-  const imageBlur = await fetch("https://github.com/shadcn.png")
-    .then((res) => res.arrayBuffer())
-    .then((buffer) => Buffer.from(buffer).toString("base64"));
   return (
     <div className="w-full min-h-screen mt-[5.5rem] mb-[40px]">
       <div className="relative w-full">
@@ -59,7 +57,7 @@ const Member = async ({
             <div data-aos="fade-right" ata-aos-duration="4000">
               {imageName === "saiguna" && (
                 <Image
-                  src={image}
+                  src={Saiguna}
                   alt={imageName}
                   width={1000}
                   height={500}
@@ -67,12 +65,11 @@ const Member = async ({
                   quality={100}
                   className="lg:w-[1000px] lg:h-[500px] max-lg:w-[1500px] max-sm:w-[350px] h-[500px] object-cover"
                   placeholder="blur"
-                  blurDataURL={`data:image/png;base64,${imageBlur}`}
                 />
               )}
               {imageName === "shravan" && (
                 <Image
-                  src={image}
+                  src={Shravan}
                   alt={imageName}
                   width={1000}
                   height={500}
@@ -80,12 +77,11 @@ const Member = async ({
                   quality={100}
                   className="lg:w-[1000px] lg:h-[500px] max-lg:w-[1500px] max-sm:w-[350px] h-[500px] object-cover"
                   placeholder="blur"
-                  blurDataURL={`data:image/png;base64,${imageBlur}`}
                 />
               )}
               {imageName === "sandeep" && (
                 <Image
-                  src={image}
+                  src={Sandeep}
                   alt={imageName}
                   width={1500}
                   height={500}
@@ -93,7 +89,6 @@ const Member = async ({
                   quality={100}
                   className="lg:w-[1500px] lg:h-[500px] max-lg:w-[1500px] max-sm:w-[350px] h-[400px] object-cover"
                   placeholder="blur"
-                  blurDataURL={`data:image/png;base64,${imageBlur}`}
                 />
               )}
             </div>

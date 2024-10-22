@@ -78,7 +78,7 @@ const Drop = ({ title, dropdown }: Prop1) => {
                   {title}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-[#121212]">
-                  <NavigationMenuLink className="flex  flex-col  w-[100px] gap-3 p-4 md:w-[135px] lg:w-[150px]">
+                  <div className="flex  flex-col  w-[100px] gap-3 p-4 md:w-[135px] lg:w-[150px]">
                     {dropdown?.map((item, index) => (
                       <Link
                         key={index}
@@ -88,7 +88,7 @@ const Drop = ({ title, dropdown }: Prop1) => {
                         {item.title}
                       </Link>
                     ))}
-                  </NavigationMenuLink>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -103,7 +103,7 @@ const Drop = ({ title, dropdown }: Prop1) => {
                   {title}
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="bg-[#121212]">
-                  <NavigationMenuLink className="lg:items-center grid grid-cols-2 grid-rows-3 gap-[10px]   w-[200px]  p-4 md:w-[400px]">
+                  <div className="lg:items-center grid grid-cols-2 grid-rows-3 gap-[10px]   w-[200px]  p-4 md:w-[400px]">
                     {dropdown?.map((item, index) => (
                       <Link
                         key={index}
@@ -113,7 +113,7 @@ const Drop = ({ title, dropdown }: Prop1) => {
                         {item.title}
                       </Link>
                     ))}
-                  </NavigationMenuLink>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>

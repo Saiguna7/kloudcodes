@@ -1,15 +1,15 @@
-import Member from "./member";
+import Member from "../../../components/member";
 import NotFound from "./not-found";
 
-const page = ({ params }: { params: { name: string } }) => {
-  if (params.name === "sai-guna") {
+const page = async ({ params }: { params: Promise<{ name: string }> }) => {
+  const { name } = await params;
+  if (name === "sai-guna") {
     return (
       <>
         <Member
           lead="managing"
           name="Sai Guna Vanam"
           designation="Full Stack Developer & Managing"
-          image="/images/saiguna.jpg"
           imageName="saiguna"
           about="Sai Guna"
           linkedin="https://www.linkedin.com/in/sai-guna-vanam-817404251/"
@@ -32,14 +32,13 @@ const page = ({ params }: { params: { name: string } }) => {
       </>
     );
   }
-  if (params.name === "shravan-kumar") {
+  if (name === "shravan-kumar") {
     return (
       <>
         <Member
           lead="managing"
           name="Shravan Kumar Nagapuri"
           designation="Java Full Stack Developer & Managing"
-          image="/images/shravan.jpg"
           imageName="shravan"
           about="Shravan Kumar"
           linkedin="https://www.linkedin.com/in/shravan-nagapuri-46803a16b/"
@@ -50,14 +49,13 @@ const page = ({ params }: { params: { name: string } }) => {
       </>
     );
   }
-  if (params.name === "sandeep") {
+  if (name === "sandeep") {
     return (
       <>
         <Member
           lead="Designer"
           name="Sandeep"
           designation="Graphic Designer"
-          image="/images/sandeep.jpg"
           imageName="sandeep"
           about="Sandeep"
           p1="  is a creative powerhouse with a knack for translating ideas into visually compelling designs. With over of experience in the field, He is specializes in brand identity, digital illustrations, and print design. His keen sense of aesthetics and attention to detail make him a vital part of our creative team.
@@ -69,7 +67,7 @@ const page = ({ params }: { params: { name: string } }) => {
       </>
     );
   }
-  if (params.name !== "sandeep" || "sai-guna" || "shravan-kumar") {
+  if (name !== "sandeep" || "sai-guna" || "shravan-kumar") {
     return (
       <>
         <NotFound />

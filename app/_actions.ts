@@ -18,7 +18,7 @@ export async function sendEmail(data: ContactFormInputs) {
         from: "kloudcodes <email@kloudcodes.com>",
         to: "info.kloudcode@gmail.com",
         subject: subject,
-        reply_to: email,
+        replyTo: email,
         text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
         react: ContactFormEmail({ name, email, subject, message }),
       });
