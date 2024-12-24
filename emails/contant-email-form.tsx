@@ -1,3 +1,4 @@
+"use server";
 import {
   Html,
   Body,
@@ -10,7 +11,6 @@ import {
   Text,
 } from "@react-email/components";
 import { Tailwind } from "@react-email/tailwind";
-import Logo from "@/public/images/logo.png";
 type ContactFormEmailProps = {
   name: string;
   email: string;

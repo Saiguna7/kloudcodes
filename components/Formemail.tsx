@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { toast } from "sonner";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { sendEmail } from "@/app/_actions";
+import { sendEmail } from "@/actions/sendEmail";
 export type ContactForminput = z.infer<typeof ContactFormSchema>;
 export default function Formemail() {
   const {

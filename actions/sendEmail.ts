@@ -14,16 +14,16 @@ export async function sendEmail(data: ContactFormInputs) {
     const { name, email, subject, message } = result.data;
 
     try {
-      const emailData = await resend.emails.send({
+      await resend.emails.send({
         from: "kloudcodes <email@kloudcodes.com>",
         to: "info.kloudcode@gmail.com",
         subject: subject,
         replyTo: email,
         text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`,
-        react: ContactFormEmail({ name, email, subject, message }),
+        react: await ContactFormEmail({ name, email, subject, message }),
       });
 
-      return { success: true, data: emailData };
+      return { success: true };
     } catch (error: any) {
       return { success: false, error: error.toString() };
     }

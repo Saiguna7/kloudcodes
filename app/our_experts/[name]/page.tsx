@@ -42,8 +42,8 @@ const page = async ({ params }: { params: Promise<{ name: string }> }) => {
           imageName="shravan"
           about="Shravan Kumar"
           linkedin="https://www.linkedin.com/in/shravan-nagapuri-46803a16b/"
-          p1=" is a seasoned Frontend Developer with a passion for crafting visually stunning and highly responsive user interfaces. With over 5 years of experience, she has honed her skills in turning complex design concepts into seamless web experiences that engage and delight users."
-          p2="Technologies:Shravan is proficient in HTML, CSS, and JavaScript, and excels in using modern frameworks and libraries like React, Vue.js, and Angular. She has a keen eye for design and is skilled in working with tools like Adobe XD, Figma, and Sketch to translate designs into code with pixel-perfect precision."
+          p1=" is a seasoned Frontend Developer with a passion for crafting visually stunning and highly responsive user interfaces. With over 2 years of experience, he has honed his skills in turning complex design concepts into seamless web experiences that engage and delight users."
+          p2="Technologies:Shravan is proficient in HTML, CSS, and JavaScript, and excels in using modern frameworks and libraries like React, Vue.js, and Angular. he has a keen eye for design and is skilled in working with tools like Adobe XD, Figma, and Sketch to translate designs into code with pixel-perfect precision."
           p3="I see the frontend as the bridge between users and technology. My goal is to create interfaces that are not only functional but also enjoyable to interact with. The web is a constantly evolving landscape, and I love being a part of that evolution."
         />
       </>

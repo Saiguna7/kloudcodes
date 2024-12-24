@@ -47,7 +47,6 @@ const HeroSection = () => {
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 overflow-hidden"
               width={300}
               height={300}
-              placeholder="blur"
             />
           </div>
         </Motion2>
